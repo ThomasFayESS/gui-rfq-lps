@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Temperature Transmitter</name>
+  <width>1630</width>
+  <height>810</height>
+  <widget type="xyplot" version="2.0.0">
+    <name>X/Y Plot</name>
+    <x>740</x>
+    <y>860</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping_Sensor</name>
+    <width>200</width>
+    <height>80</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="New Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 == 0">
+          <value>false</value>
+        </exp>
+        <exp bool_exp="pv1 == 1">
+          <value>true</value>
+        </exp>
+        <pv_name>local://enable</pv_name>
+      </rule>
+    </rules>
+    <widget type="label" version="2.0.0">
+      <name>Label_Transmitter</name>
+      <text>TT-$(Idx)</text>
+      <x>10</x>
+      <width>64</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_H2</name>
+    <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(Idx):$(Property).HIHI</pv_name>
+    <x>150</x>
+    <y>20</y>
+    <width>40</width>
+    <precision>2</precision>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_H2</name>
+    <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(Idx):$(Property).HIHI</pv_name>
+    <x>90</x>
+    <y>20</y>
+    <width>50</width>
+    <precision>2</precision>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_HIGH</name>
+    <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(Idx):$(Property).HIGH</pv_name>
+    <x>90</x>
+    <y>60</y>
+    <width>50</width>
+    <precision>2</precision>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_HIGH</name>
+    <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(Idx):$(Property).HIGH</pv_name>
+    <x>150</x>
+    <y>60</y>
+    <width>40</width>
+    <precision>2</precision>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_H2_2</name>
+    <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(Idx):$(Property).VAL</pv_name>
+    <x>20</x>
+    <y>40</y>
+    <width>60</width>
+    <precision>2</precision>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_Interlock</name>
+    <text>Interlock Level</text>
+    <x>90</x>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_Warning</name>
+    <text>Warning Level</text>
+    <x>90</x>
+    <y>40</y>
+  </widget>
+</display>
