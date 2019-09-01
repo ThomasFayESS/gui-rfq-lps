@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <name>RFQ LPS - Expert Screen</name>
+  <macros>
+    <SYSDESC>Settings</SYSDESC>
+    <SYSTEM>RFQ Local Protection System</SYSTEM>
+  </macros>
   <width>1630</width>
   <height>810</height>
   <widget type="rectangle" version="2.0.0">
-    <name>Rectangle</name>
+    <name>Rectangle_Title</name>
     <class>TITLE-BAR</class>
     <x use_class="true">0</x>
     <y use_class="true">0</y>
@@ -17,7 +21,7 @@
     </background_color>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label</name>
+    <name>Label_Title</name>
     <class>TITLE</class>
     <text>$(SYSTEM) - $(SYSDESC)</text>
     <x use_class="true">20</x>
@@ -37,112 +41,339 @@
     <vertical_alignment use_class="true">1</vertical_alignment>
     <wrap_words use_class="true">false</wrap_words>
   </widget>
-  <widget type="xyplot" version="2.0.0">
-    <name>X/Y Plot</name>
-    <x>740</x>
-    <y>860</y>
-    <width>1</width>
-    <height>1</height>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Grouping_ControllerGains</name>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_Group</name>
     <x>30</x>
-    <y>80</y>
-    <width>270</width>
-    <height>190</height>
-    <style>3</style>
-    <rules>
-      <rule name="New Rule" prop_id="visible" out_exp="false">
-        <exp bool_exp="pv0 == 0">
-          <value>false</value>
-        </exp>
-        <exp bool_exp="pv1 == 1">
-          <value>true</value>
-        </exp>
-        <pv_name>local://enable</pv_name>
-      </rule>
-    </rules>
-    <widget type="rectangle" version="2.0.0">
-      <name>Rectangle_7</name>
-      <width>270</width>
-      <height>30</height>
-      <line_width>0</line_width>
-      <background_color>
-        <color name="GROUP-BORDER" red="150" green="155" blue="151">
-        </color>
-      </background_color>
-      <corner_width>10</corner_width>
-      <corner_height>10</corner_height>
-    </widget>
-    <widget type="rectangle" version="2.0.0">
-      <name>Rectangle_8</name>
-      <y>10</y>
-      <width>270</width>
-      <line_width>0</line_width>
-      <background_color>
-        <color name="GROUP-BORDER" red="150" green="155" blue="151">
-        </color>
-      </background_color>
-    </widget>
-    <widget type="rectangle" version="2.0.0">
-      <name>Rectangle_9</name>
-      <y>30</y>
-      <width>270</width>
-      <height>160</height>
-      <line_color>
-        <color name="GROUP-BORDER" red="150" green="155" blue="151">
-        </color>
-      </line_color>
-      <background_color>
-        <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
-        </color>
-      </background_color>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_29</name>
-      <text>Gain K</text>
-      <x>16</x>
-      <y>61</y>
-      <width>44</width>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Title_01</name>
-      <text>$(Title-01)</text>
-      <x>10</x>
-      <width>250</width>
-      <height>30</height>
-      <font>
-        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_1</name>
-      <pv_name>$(SYSTEM):PI-I-GAINK-RBV</pv_name>
-      <x>170</x>
-      <y>61</y>
-      <width>40</width>
-      <precision>2</precision>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_GAINK</name>
-      <pv_name>$(SYSTEM):PI-I-GAINK</pv_name>
-      <x>90</x>
-      <y>61</y>
-      <width>50</width>
-      <precision>2</precision>
-    </widget>
+    <y>90</y>
+    <width>600</width>
+    <height>620</height>
+    <line_color>
+      <color name="GROUP-BORDER" red="150" green="155" blue="151">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_ID</name>
+    <text>Index</text>
+    <x>30</x>
+    <y>70</y>
+    <width>90</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_Warning</name>
+    <text>Warning Level</text>
+    <x>400</x>
+    <y>70</y>
+    <width>106</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_Interlock</name>
+    <text>Interlock Level</text>
+    <x>520</x>
+    <y>70</y>
+    <width>107</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_Description</name>
+    <text>Description</text>
+    <x>120</x>
+    <y>70</y>
+    <width>220</width>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-001</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>001</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>90</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-002</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>002</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>120</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-003</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>003</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>150</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-004</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>004</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>180</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-005</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>005</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>220</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-006</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>006</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>260</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-007</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>007</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>300</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-008</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>008</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>340</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-009</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>009</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>380</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-010</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>010</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>420</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-011</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>011</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>460</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-012</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>012</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>500</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-013</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>013</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>540</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-014</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>014</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>580</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-015</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>015</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>620</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded_Display_TT-016</name>
+    <file>embedded/TT.bob</file>
+    <macros>
+      <Dis>EMR</Dis>
+      <Idx>016</Idx>
+      <P>Temp</P>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <x>30</x>
+    <y>660</y>
+    <width>600</width>
+    <height>40</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_ID_1</name>
+    <text>Index</text>
+    <x>920</x>
+    <y>70</y>
+    <width>90</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_Description_1</name>
+    <text>Description</text>
+    <x>1010</x>
+    <y>70</y>
+    <width>220</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_Warning_1</name>
+    <text>Warning Level</text>
+    <x>1290</x>
+    <y>70</y>
+    <width>106</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_Interlock_1</name>
+    <text>Interlock Level</text>
+    <x>1410</x>
+    <y>70</y>
+    <width>107</width>
   </widget>
   <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_10</name>
-    <x>410</x>
-    <y>400</y>
-    <width>200</width>
-    <height>321</height>
+    <name>Rectangle_Group_1</name>
+    <x>910</x>
+    <y>90</y>
+    <width>600</width>
+    <height>620</height>
     <line_color>
       <color name="GROUP-BORDER" red="150" green="155" blue="151">
       </color>
@@ -153,63 +384,35 @@
     </background_color>
   </widget>
   <widget type="embedded" version="2.0.0">
-    <name>Embedded_Display_TT-001</name>
+    <name>Embedded_Display_TT-017</name>
     <file>embedded/TT.bob</file>
     <macros>
       <Dis>EMR</Dis>
-      <Idx>001</Idx>
+      <Idx>017</Idx>
+      <P>Temp</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
     </macros>
-    <x>410</x>
-    <y>400</y>
-    <width>200</width>
-    <height>80</height>
+    <x>910</x>
+    <y>90</y>
+    <width>600</width>
+    <height>40</height>
     <transparent>true</transparent>
   </widget>
   <widget type="embedded" version="2.0.0">
-    <name>Embedded_Display_TT-002</name>
+    <name>Embedded_Display_TT-018</name>
     <file>embedded/TT.bob</file>
     <macros>
       <Dis>EMR</Dis>
-      <Idx>002</Idx>
+      <Idx>018</Idx>
+      <P>Temp</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
     </macros>
-    <x>410</x>
-    <y>481</y>
-    <width>200</width>
-    <height>80</height>
-    <transparent>true</transparent>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded_Display_TT-003</name>
-    <file>embedded/TT.bob</file>
-    <macros>
-      <Dis>EMR</Dis>
-      <Idx>003</Idx>
-      <Sec>RFQ</Sec>
-      <Sub>010</Sub>
-    </macros>
-    <x>410</x>
-    <y>560</y>
-    <width>200</width>
-    <height>80</height>
-    <transparent>true</transparent>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded_Display_TT-003_1</name>
-    <file>embedded/TT.bob</file>
-    <macros>
-      <Dis>EMR</Dis>
-      <Idx>004</Idx>
-      <Sec>RFQ</Sec>
-      <Sub>010</Sub>
-    </macros>
-    <x>410</x>
-    <y>640</y>
-    <width>200</width>
-    <height>80</height>
+    <x>910</x>
+    <y>130</y>
+    <width>600</width>
+    <height>40</height>
     <transparent>true</transparent>
   </widget>
 </display>
