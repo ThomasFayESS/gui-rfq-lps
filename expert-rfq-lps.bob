@@ -46,6 +46,20 @@
     <vertical_alignment use_class="true">1</vertical_alignment>
     <wrap_words use_class="true">false</wrap_words>
   </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_ID</name>
+    <text>ID</text>
+    <x>40</x>
+    <y>70</y>
+    <width>90</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_Description</name>
+    <text>Description</text>
+    <x>130</x>
+    <y>70</y>
+    <width>220</width>
+  </widget>
   <widget type="rectangle" version="2.0.0">
     <name>Rectangle_Group</name>
     <x>30</x>
@@ -62,32 +76,18 @@
     </background_color>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_ID</name>
-    <text>ID</text>
-    <x>30</x>
-    <y>70</y>
-    <width>90</width>
-  </widget>
-  <widget type="label" version="2.0.0">
     <name>Label_Warning</name>
-    <text>Warning Level</text>
-    <x>400</x>
+    <text>Warning Level [°C]</text>
+    <x>360</x>
     <y>70</y>
-    <width>106</width>
+    <width>125</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_Interlock</name>
-    <text>Interlock Level</text>
-    <x>520</x>
+    <text>Interlock Level [°C]</text>
+    <x>500</x>
     <y>70</y>
-    <width>107</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_Description</name>
-    <text>Description</text>
-    <x>120</x>
-    <y>70</y>
-    <width>220</width>
+    <width>130</width>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded_Display_TT-001</name>
@@ -95,9 +95,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>001</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>90</y>
@@ -111,9 +112,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>002</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>130</y>
@@ -127,9 +129,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>003</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>170</y>
@@ -143,9 +146,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>004</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>210</y>
@@ -159,9 +163,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>005</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>250</y>
@@ -175,9 +180,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>006</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>290</y>
@@ -191,9 +197,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>007</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>330</y>
@@ -207,9 +214,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>008</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>370</y>
@@ -223,9 +231,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>009</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>410</y>
@@ -239,9 +248,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>010</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>450</y>
@@ -255,9 +265,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>011</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>490</y>
@@ -271,9 +282,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>012</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>530</y>
@@ -287,9 +299,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>013</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>570</y>
@@ -303,9 +316,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>014</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>610</y>
@@ -319,9 +333,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>015</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>650</y>
@@ -335,9 +350,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>016</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>30</x>
     <y>690</y>
@@ -358,20 +374,6 @@
     <x>1010</x>
     <y>70</y>
     <width>220</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_Warning_1</name>
-    <text>Warning Level</text>
-    <x>1290</x>
-    <y>70</y>
-    <width>106</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_Interlock_1</name>
-    <text>Interlock Level</text>
-    <x>1410</x>
-    <y>70</y>
-    <width>107</width>
   </widget>
   <widget type="rectangle" version="2.0.0">
     <name>Rectangle_Group_1</name>
@@ -394,9 +396,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>017</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>90</y>
@@ -410,9 +413,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>018</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>130</y>
@@ -426,9 +430,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>019</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>170</y>
@@ -442,9 +447,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>020</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>210</y>
@@ -458,9 +464,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>021</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>250</y>
@@ -474,9 +481,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>022</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>290</y>
@@ -490,9 +498,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>023</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>330</y>
@@ -506,9 +515,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>024</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>370</y>
@@ -522,9 +532,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>025</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>410</y>
@@ -538,9 +549,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>026</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>450</y>
@@ -554,9 +566,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>027</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>490</y>
@@ -570,9 +583,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>028</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>530</y>
@@ -586,9 +600,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>029</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>570</y>
@@ -602,9 +617,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>030</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>610</y>
@@ -618,9 +634,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>031</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>650</y>
@@ -634,9 +651,10 @@
     <macros>
       <Dis>EMR</Dis>
       <Idx>032</Idx>
-      <P>Temp</P>
+      <P>TempR</P>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
+      <PREC>1</PREC>
     </macros>
     <x>910</x>
     <y>690</y>
@@ -673,5 +691,19 @@
     <height>50</height>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_Warning_1</name>
+    <text>Warning Level [°C]</text>
+    <x>1240</x>
+    <y>70</y>
+    <width>125</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_Interlock_1</name>
+    <text>Interlock Level [°C]</text>
+    <x>1380</x>
+    <y>70</y>
+    <width>130</width>
   </widget>
 </display>

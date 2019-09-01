@@ -24,7 +24,7 @@
       <x>530</x>
       <y>10</y>
       <width>40</width>
-      <precision>2</precision>
+      <precision>$(PREC)</precision>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Label_Description</name>
@@ -40,13 +40,13 @@
       <vertical_alignment>1</vertical_alignment>
       <tooltip></tooltip>
     </widget>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_HIGH</name>
-      <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(Idx):$(P).HIGH</pv_name>
-      <x>410</x>
-      <y>10</y>
-      <width>40</width>
-      <precision>2</precision>
-    </widget>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_HIGH</name>
+    <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(Idx):$(P).HIGH</pv_name>
+    <x>410</x>
+    <y>10</y>
+    <width>40</width>
+    <precision>$(PREC)</precision>
+  </widget>
 </display>

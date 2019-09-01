@@ -15,47 +15,47 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>TextUpdate_01</name>
-      <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(Idx-01):TempR</pv_name>
+      <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(ID-01):TempR</pv_name>
       <x>80</x>
       <y>60</y>
       <precision>1</precision>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>TextUpdate_2</name>
-      <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(Idx-02):TempR</pv_name>
+      <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(ID-02):TempR</pv_name>
       <x>80</x>
       <y>90</y>
       <precision>1</precision>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_1</name>
-      <text>$(ID-01)</text>
+      <text>$(ID-02)</text>
       <x>10</x>
       <y>90</y>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>TextUpdate_3</name>
-      <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(Idx-03):TempR</pv_name>
+      <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(ID-03):TempR</pv_name>
       <x>80</x>
       <y>120</y>
       <precision>1</precision>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_2</name>
-      <text>$(ID-01)</text>
+      <text>$(ID-03)</text>
       <x>10</x>
       <y>120</y>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>TextUpdate_4</name>
-      <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(Idx-04):TempR</pv_name>
+      <pv_name>$(Sec)-$(Sub):$(Dis)-TT-$(ID-04):TempR</pv_name>
       <x>80</x>
       <y>153</y>
       <precision>1</precision>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_3</name>
-      <text>$(ID-01)</text>
+      <text>$(ID-04)</text>
       <x>10</x>
       <y>153</y>
     </widget>
