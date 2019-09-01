@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>System Statuses</name>
+  <widget type="group" version="2.0.0">
+    <name>Group_SystemStatuses</name>
+    <macros>
+      <Dis>EMR</Dis>
+      <Sec>RFQ</Sec>
+      <Sub>010</Sub>
+    </macros>
+    <width>200</width>
+    <height>220</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="action_button" version="3.0.0">
+      <name>ActionButton_ResetSystem</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(Sec)-$(Sub):$(Dis)-Intf-001:Rst</pv_name>
+          <value>1</value>
+          <description>Reset System</description>
+        </action>
+      </actions>
+      <x>20</x>
+      <y>10</y>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>Status_LPS</name>
+      <pv_name>$(Sec)-$(Sub):$(Dis)-Intf-001:Stat</pv_name>
+      <x>120</x>
+      <y>80</y>
+      <off_color>
+        <color name="LED-RED-ON" red="255" green="60" blue="46">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+        </color>
+      </on_color>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>Status_CoolingSys</name>
+      <pv_name>CWM-CWS03:WtrC-Intf-001:Stat</pv_name>
+      <x>120</x>
+      <y>118</y>
+      <off_color>
+        <color name="LED-RED-ON" red="255" green="60" blue="46">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+        </color>
+      </on_color>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>Status_OutputToRFLPS</name>
+      <pv_name>$(Sec)-$(Sub):$(Dis)-Intf-001:ILck</pv_name>
+      <x>120</x>
+      <y>150</y>
+      <off_color>
+        <color name="LED-RED-ON" red="255" green="60" blue="46">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+        </color>
+      </on_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_Status_LPS</name>
+      <text>Local Protection</text>
+      <y>80</y>
+      <width>120</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_Title</name>
+      <text>Statuses</text>
+      <x>10</x>
+      <y>50</y>
+      <width>120</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_Status_LPS_2</name>
+      <text>Cooling System</text>
+      <y>118</y>
+      <width>120</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_SysOutput</name>
+      <text>To RF LPS</text>
+      <y>150</y>
+      <width>120</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_HeartbeatPLC</name>
+      <pv_name>$(Sec)-$(Sub):Ctrl-PLC-001:Heartbeat</pv_name>
+      <x>120</x>
+      <y>190</y>
+      <width>60</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_HeartbeatPLC</name>
+      <text>PLC Heartbeat</text>
+      <y>190</y>
+      <width>120</width>
+    </widget>
+  </widget>
+</display>
