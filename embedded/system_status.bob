@@ -4,7 +4,7 @@
   <widget type="group" version="2.0.0">
     <name>Group_SystemStatuses</name>
     <macros>
-      <Dis>EMR</Dis>
+      <Dis>Ctrl</Dis>
       <Sec>RFQ</Sec>
       <Sub>010</Sub>
     </macros>
@@ -26,9 +26,9 @@
       <tooltip>$(actions)</tooltip>
     </widget>
     <widget type="led" version="2.0.0">
-      <name>Status_LPS</name>
-      <pv_name>$(Sec)-$(Sub):$(Dis)-Intf-001:Stat</pv_name>
-      <x>120</x>
+      <name>Status_OverTemp</name>
+      <pv_name>$(Sec)-$(Sub):$(Dis)-Intf-001:StatTemp</pv_name>
+      <x>160</x>
       <y>80</y>
       <off_color>
         <color name="LED-RED-ON" red="255" green="60" blue="46">
@@ -41,8 +41,8 @@
     </widget>
     <widget type="led" version="2.0.0">
       <name>Status_CoolingSys</name>
-      <pv_name>CWM-CWS03:WtrC-Intf-001:Stat</pv_name>
-      <x>120</x>
+      <pv_name>$(Sec)-$(Sub):$(Dis)-Intf-001:StatCool</pv_name>
+      <x>160</x>
       <y>118</y>
       <off_color>
         <color name="LED-RED-ON" red="255" green="60" blue="46">
@@ -54,9 +54,9 @@
       </on_color>
     </widget>
     <widget type="led" version="2.0.0">
-      <name>Status_OutputToRFLPS</name>
+      <name>Status_OutputToRFLPS SIM</name>
       <pv_name>$(Sec)-$(Sub):$(Dis)-Intf-001:ILck</pv_name>
-      <x>120</x>
+      <x>160</x>
       <y>150</y>
       <off_color>
         <color name="LED-RED-ON" red="255" green="60" blue="46">
@@ -68,10 +68,10 @@
       </on_color>
     </widget>
     <widget type="label" version="2.0.0">
-      <name>Label_Status_LPS</name>
-      <text>Local Protection</text>
+      <name>Label_Status_OverTemp</name>
+      <text>Over-temperature</text>
       <y>80</y>
-      <width>120</width>
+      <width>150</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_Title</name>
@@ -81,20 +81,20 @@
       <width>120</width>
     </widget>
     <widget type="label" version="2.0.0">
-      <name>Label_Status_LPS_2</name>
-      <text>Cooling System</text>
+      <name>Label_Status_Cool</name>
+      <text>Water Cooling</text>
       <y>118</y>
-      <width>120</width>
+      <width>150</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_SysOutput</name>
-      <text>To RF LPS</text>
+      <text>To RF LPS Slow</text>
       <y>150</y>
-      <width>120</width>
+      <width>150</width>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_HeartbeatPLC</name>
-      <pv_name>$(Sec)-$(Sub):Ctrl-PLC-001:Heartbeat</pv_name>
+      <pv_name>$(Sec)-$(Sub):$(Dis)-PLC-001:HeartbeatFromPLCR</pv_name>
       <x>120</x>
       <y>190</y>
       <width>60</width>
